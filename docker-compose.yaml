@@ -1,0 +1,12 @@
+version: "3"
+services:
+  firefox:
+    build: .
+    container_name: firefox-docker
+    restart: always
+    shm_size: "2g"
+    ports:
+      - "5800:5800"
+      - "5801:5900"
+    volumes:
+      - ./config:/config:rw
