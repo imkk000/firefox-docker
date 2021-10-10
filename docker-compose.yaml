@@ -5,6 +5,15 @@ services:
     container_name: firefox-docker
     restart: always
     shm_size: "2g"
+    dns:
+      - 1.1.1.1
+      - 1.0.0.1
+      - 8.8.8.8
+      - 8.8.4.4
+    environment:
+      - DISPLAY_WIDTH=1366
+      - DISPLAY_HEIGHT=768
+      - ENABLE_CJK_FONT=1
     ports:
       - "5800:5800"
       - "5801:5900"
